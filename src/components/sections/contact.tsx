@@ -5,7 +5,7 @@ import { useLang } from '@/context/language-context';
 import { t } from '@/lib/translations';
 
 // ─── הכנס כאן את ה-Form ID שלך מ-formspree.io ───────────────────────────
-const FORMSPREE_ID = 'YOUR_FORM_ID';
+const FORMSPREE_ID = 'xjglqqdd';
 // ─────────────────────────────────────────────────────────────────────────
 
 export default function Contact() {
