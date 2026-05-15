@@ -174,10 +174,12 @@ export default function Hero() {
             </h1>
           </div>
 
-          <div className="max-w-3xl mx-auto anim-fiu delay-600">
-            <p className="text-lg md:text-xl lg:text-2xl text-cyan-100/80 font-light leading-relaxed">
-              {tx.subtitle}
-            </p>
+          <div className="max-w-3xl mx-auto anim-fiu delay-600 space-y-3">
+            {tx.subtitle.split('\n\n').map((line, i) => (
+              <p key={i} className="text-lg md:text-xl lg:text-2xl text-cyan-100/80 font-light leading-relaxed">
+                {line}
+              </p>
+            ))}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 anim-fiu delay-800">
