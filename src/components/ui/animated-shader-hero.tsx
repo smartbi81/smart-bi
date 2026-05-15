@@ -175,11 +175,17 @@ export default function Hero() {
           </div>
 
           <div className="max-w-3xl mx-auto anim-fiu delay-600 space-y-3">
-            {tx.subtitle.split('\n\n').map((line, i) => (
-              <p key={i} className="text-lg md:text-xl lg:text-2xl text-cyan-100/80 font-light leading-relaxed">
-                {line}
-              </p>
-            ))}
+            {tx.subtitle.split('\n\n').map((line, i, arr) =>
+              i === arr.length - 1 ? (
+                <p key={i} className="text-lg md:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent leading-relaxed">
+                  {line}
+                </p>
+              ) : (
+                <p key={i} className="text-lg md:text-xl lg:text-2xl text-cyan-100/80 font-light leading-relaxed">
+                  {line}
+                </p>
+              )
+            )}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 anim-fiu delay-800">
