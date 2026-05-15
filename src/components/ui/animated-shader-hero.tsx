@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { useLang } from '@/context/language-context';
 import { t } from '@/lib/translations';
 
@@ -129,6 +130,16 @@ export default function Hero() {
   const { lang } = useLang();
   const tx = t[lang].hero;
 
+  const titles = useMemo(() => tx.titles, [tx.titles]);
+  const [titleNumber, setTitleNumber] = useState(0);
+
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setTitleNumber((prev) => (prev === titles.length - 1 ? 0 : prev + 1));
+    }, 2200);
+    return () => clearTimeout(id);
+  }, [titleNumber, titles]);
+
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
       <style>{`
@@ -190,8 +201,25 @@ export default function Hero() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-200 bg-clip-text text-transparent anim-fiu delay-200">
               {tx.line1}
             </h1>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent anim-fiu delay-400">
-              {tx.line2}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold anim-fiu delay-400">
+              <span className="relative flex w-full justify-center overflow-hidden" style={{ height: '1.15em' }}>
+                &nbsp;
+                {titles.map((title, index) => (
+                  <motion.span
+                    key={index}
+                    className="absolute font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+                    initial={{ opacity: 0, y: 80 }}
+                    transition={{ type: 'spring', stiffness: 55, damping: 14 }}
+                    animate={
+                      titleNumber === index
+                        ? { y: 0, opacity: 1 }
+                        : { y: titleNumber > index ? -80 : 80, opacity: 0 }
+                    }
+                  >
+                    {title}
+                  </motion.span>
+                ))}
+              </span>
             </h1>
           </div>
 

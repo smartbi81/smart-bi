@@ -14,6 +14,7 @@ export const t = {
       badge: 'Smart BI — The Intelligence Layer for Your Data',
       line1: 'Not dashboards.',
       line2: 'Insights.',
+      titles: ['Insights.', 'Decisions.', 'Conclusions.'],
       subtitle:
         'SMART BI scans your data 24/7 using Agents that understand what\'s happening in your business — surfacing issues, root causes, and recommended actions.\n\nTraditional BI stops at reports. Users have to actively go in, investigate, and figure out on their own that something went wrong.\n\nOur agents do that automatically, like an analyst working for you around the clock.',
       primary: 'Schedule a Call',
@@ -205,6 +206,7 @@ export const t = {
       badge: 'Smart BI — שכבת האינטליגנציה של הדאטה שלכם',
       line1: 'לא דשבורדים.',
       line2: 'תובנות.',
+      titles: ['תובנות.', 'החלטות.', 'מסקנות.'],
       subtitle:
         'SMART BI סורק את המידע שלכם 24/7 באמצעות Agents שיודעים להבין מה מתרחש בפעילות העסקית, מציפים בעיות, ואת הסיבות שבגללן נגרמו.\n\nכבר לא צריך להיכנס לדוחות ולעקוב אחרי דברים חריגים.\n\nהסוכנים שלנו עושים את זה אוטומטית, כמו אנליסט שעובד עבורכם כל הזמן.',
       primary: 'קבעו שיחה',
