@@ -15,7 +15,7 @@ export const t = {
       line1: 'Not dashboards.',
       line2: 'Insights.',
       subtitle:
-        'Most organizations are buried in BI reports — stacks of screens and metrics, hard to navigate, impossible to tell what matters. Smart BI doesn\'t produce more reports. It scans your data, finds the real reasons behind changes, and delivers focused insights with clear recommendations.',
+        'SMART BI scans your data 24/7 using Agents that understand what\'s happening in your business — surfacing issues, root causes, and recommended actions. Traditional BI stops at reports. Users have to actively go in, investigate, and figure out on their own that something went wrong. Our agents do that automatically, like an analyst working for you around the clock.',
       primary: 'Schedule a Call',
       secondary: 'See Live Demo',
     },
@@ -206,7 +206,7 @@ export const t = {
       line1: 'לא דשבורדים.',
       line2: 'תובנות.',
       subtitle:
-        'רוב הארגונים מוצפים בדוחות BI — ערמות של מסכים ומדדים שקשה להתמצא בהם, ואי אפשר לדעת מה באמת חשוב. Smart BI לא מייצר עוד דוחות. הוא סורק, מאתר סיבות לשינויים, ומספק תובנות עם המלצות ודרכי פעולה ברורות.',
+        'SMART BI סורק את המידע שלכם 24/7 באמצעות Agents שיודעים להבין מה מתרחש בפעילות העסקית, מציפים בעיות, סיבות שבגללן נגרמו והמלצות לפעולה. BI רגיל מסתיים בדוחות — המשתמש צריך להיכנס, לחקור, ולגלות בעצמו שמשהו חריג קרה. הסוכנים שלנו עושים את זה אוטומטית, כמו אנליסט שעובד עבורכם כל הזמן.',
       primary: 'קבעו שיחה',
       secondary: 'ראו דמו חי',
     },
