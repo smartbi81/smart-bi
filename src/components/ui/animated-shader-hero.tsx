@@ -140,12 +140,33 @@ export default function Hero() {
           from { opacity: 0; transform: translateY(30px); }
           to   { opacity: 1; transform: translateY(0); }
         }
+        @keyframes underline-draw {
+          from { transform: scaleX(0); opacity: 0; }
+          to   { transform: scaleX(1); opacity: 1; }
+        }
+        @keyframes underline-shimmer {
+          0%   { background-position: 200% center; }
+          100% { background-position: -200% center; }
+        }
         .anim-fid  { animation: fade-in-down 0.8s ease-out forwards; }
         .anim-fiu  { animation: fade-in-up  0.8s ease-out forwards; opacity: 0; }
         .delay-200 { animation-delay: 0.2s; }
         .delay-400 { animation-delay: 0.4s; }
         .delay-600 { animation-delay: 0.6s; }
         .delay-800 { animation-delay: 0.8s; }
+        .underline-animated {
+          display: block;
+          height: 2px;
+          margin-top: 6px;
+          border-radius: 9999px;
+          background: linear-gradient(90deg, #67e8f9, #a78bfa, #67e8f9, #a78bfa);
+          background-size: 300% auto;
+          transform-origin: right;
+          animation:
+            underline-draw   0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.4s both,
+            underline-shimmer 3s linear 2.2s infinite;
+          box-shadow: 0 0 8px rgba(103, 232, 249, 0.5);
+        }
       `}</style>
 
       <canvas
@@ -179,6 +200,7 @@ export default function Hero() {
               i === arr.length - 1 ? (
                 <p key={i} className="text-lg md:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent leading-relaxed">
                   {line}
+                  <span className="underline-animated" />
                 </p>
               ) : (
                 <p key={i} className="text-lg md:text-xl lg:text-2xl text-cyan-100/80 font-light leading-relaxed">
