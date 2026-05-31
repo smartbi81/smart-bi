@@ -238,18 +238,12 @@ export default function Hero() {
             )}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 anim-fiu delay-800">
+          <div className="flex justify-center mt-10 anim-fiu delay-800">
             <a
               href="#contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/30"
             >
               {tx.primary}
-            </a>
-            <a
-              href="/demo"
-              className="px-8 py-4 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-400/30 hover:border-cyan-400/60 text-cyan-100 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-            >
-              {tx.secondary}
             </a>
           </div>
         </div>
