@@ -68,15 +68,6 @@ export default function Navbar() {
         {/* צד פעולות: AI דמו | EN/עב | CTA */}
         <div className="flex items-center gap-4">
 
-          {/* AI דמו — מובלט קלות */}
-          <Link
-            href="/demo"
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-cyan-500/35 bg-cyan-500/10 text-cyan-300 text-sm font-semibold hover:border-cyan-400/60 hover:bg-cyan-500/18 transition-all duration-200"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-            {tx.demo}
-          </Link>
-
           {/* החלפת שפה — עדין */}
           <button
             onClick={toggle}
